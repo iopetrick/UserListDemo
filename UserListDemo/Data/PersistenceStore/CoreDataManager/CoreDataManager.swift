@@ -1,39 +1,19 @@
 //
-//  AppDelegate.swift
+//  CoreDataManager.swift
 //  UserListDemo
 //
 //  Created by Pratikkumar Prajapati on 20/05/23.
 //
 
-import UIKit
+import Foundation
 import CoreData
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
-    }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
-
-    // MARK: - Core Data stack
-
+final class CoreDataManager {
+    
+    static let shared = CoreDataManager()
+    
+    private init() {}
+    
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
@@ -76,6 +56,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
+    var backgroundContext: NSManagedObjectContext {
+        return persistentContainer.newBackgroundContext()
+    }
+    
+    func save(using context: NSManagedObjectContext, handler: (Error?) -> Void) {
+        do {
+            try context.save()
+            handler(nil)
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            //let nserror = error as NSError
+            handler(error)
+            //fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+    }
+    
 }
-

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0A5F9C2A193087008365F9 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A5F9A2A193087008365F9 /* User+CoreDataClass.swift */; };
+		2A0A5F9D2A193087008365F9 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A5F9B2A193087008365F9 /* User+CoreDataProperties.swift */; };
 		2A8489C92A18BCCA00461ADB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8489C82A18BCCA00461ADB /* AppDelegate.swift */; };
 		2A8489CB2A18BCCA00461ADB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8489CA2A18BCCA00461ADB /* SceneDelegate.swift */; };
 		2A8489CD2A18BCCA00461ADB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8489CC2A18BCCA00461ADB /* ViewController.swift */; };
@@ -17,6 +19,20 @@
 		2A8489E32A18BCCA00461ADB /* UserListDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8489E22A18BCCA00461ADB /* UserListDemoTests.swift */; };
 		2A8489ED2A18BCCA00461ADB /* UserListDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8489EC2A18BCCA00461ADB /* UserListDemoUITests.swift */; };
 		2A8489EF2A18BCCA00461ADB /* UserListDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8489EE2A18BCCA00461ADB /* UserListDemoUITestsLaunchTests.swift */; };
+		2A848A062A18BD9C00461ADB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A052A18BD9C00461ADB /* CoreDataManager.swift */; };
+		2A848A092A18BE6C00461ADB /* StoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A082A18BE6C00461ADB /* StoreData.swift */; };
+		2A848A0C2A18BECA00461ADB /* UserRootRS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A0B2A18BECA00461ADB /* UserRootRS.swift */; };
+		2A848A132A18C38A00461ADB /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A122A18C38A00461ADB /* ApiClient.swift */; };
+		2A848A152A18C51800461ADB /* RemoteUserLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A142A18C51800461ADB /* RemoteUserLoader.swift */; };
+		2A848A172A18C90F00461ADB /* FetchUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A162A18C90F00461ADB /* FetchUsers.swift */; };
+		2A848A1B2A18CD1F00461ADB /* UserPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A1A2A18CD1F00461ADB /* UserPO.swift */; };
+		2A848A1D2A18CE8900461ADB /* UserListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A1C2A18CE8900461ADB /* UserListAdapter.swift */; };
+		2A848A212A18D09900461ADB /* UserListVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A848A202A18D09900461ADB /* UserListVC.storyboard */; };
+		2A848A252A18D0B400461ADB /* UserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A242A18D0B400461ADB /* UserListViewController.m */; };
+		2A848A2A2A18D0E200461ADB /* UserListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A292A18D0E200461ADB /* UserListViewModel.m */; };
+		2A848A2F2A18D2D300461ADB /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A2D2A18D2D300461ADB /* UserTableViewCell.m */; };
+		2A848A302A18D2D300461ADB /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A848A2E2A18D2D300461ADB /* UserTableViewCell.xib */; };
+		2A848A322A18DCB300461ADB /* TmpProto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A312A18DCB300461ADB /* TmpProto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A0A5F9A2A193087008365F9 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2A0A5F9B2A193087008365F9 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2A8489C52A18BCCA00461ADB /* UserListDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserListDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8489C82A18BCCA00461ADB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A8489CA2A18BCCA00461ADB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +69,25 @@
 		2A8489E82A18BCCA00461ADB /* UserListDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserListDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A8489EC2A18BCCA00461ADB /* UserListDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDemoUITests.swift; sourceTree = "<group>"; };
 		2A8489EE2A18BCCA00461ADB /* UserListDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2A848A052A18BD9C00461ADB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		2A848A082A18BE6C00461ADB /* StoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreData.swift; sourceTree = "<group>"; };
+		2A848A0B2A18BECA00461ADB /* UserRootRS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRootRS.swift; sourceTree = "<group>"; };
+		2A848A122A18C38A00461ADB /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		2A848A142A18C51800461ADB /* RemoteUserLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserLoader.swift; sourceTree = "<group>"; };
+		2A848A162A18C90F00461ADB /* FetchUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUsers.swift; sourceTree = "<group>"; };
+		2A848A1A2A18CD1F00461ADB /* UserPO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPO.swift; sourceTree = "<group>"; };
+		2A848A1C2A18CE8900461ADB /* UserListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListAdapter.swift; sourceTree = "<group>"; };
+		2A848A202A18D09900461ADB /* UserListVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserListVC.storyboard; sourceTree = "<group>"; };
+		2A848A222A18D0B400461ADB /* UserListDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UserListDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		2A848A232A18D0B400461ADB /* UserListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserListViewController.h; sourceTree = "<group>"; };
+		2A848A242A18D0B400461ADB /* UserListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserListViewController.m; sourceTree = "<group>"; };
+		2A848A282A18D0E200461ADB /* UserListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserListViewModel.h; sourceTree = "<group>"; };
+		2A848A292A18D0E200461ADB /* UserListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserListViewModel.m; sourceTree = "<group>"; };
+		2A848A2C2A18D2D300461ADB /* UserTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
+		2A848A2D2A18D2D300461ADB /* UserTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
+		2A848A2E2A18D2D300461ADB /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		2A848A312A18DCB300461ADB /* TmpProto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpProto.swift; sourceTree = "<group>"; };
+		2A848A332A18E45800461ADB /* UserListDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserListDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +138,14 @@
 		2A8489C72A18BCCA00461ADB /* UserListDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2A8489C82A18BCCA00461ADB /* AppDelegate.swift */,
-				2A8489CA2A18BCCA00461ADB /* SceneDelegate.swift */,
+				2A8489FB2A18BCDB00461ADB /* AppDelegate */,
 				2A8489CC2A18BCCA00461ADB /* ViewController.swift */,
+				2A848A1E2A18D05A00461ADB /* Presentation */,
+				2A848A182A18CD0B00461ADB /* Domain */,
+				2A8489FD2A18BCF800461ADB /* Data */,
 				2A8489CE2A18BCCA00461ADB /* Main.storyboard */,
-				2A8489D42A18BCCA00461ADB /* Assets.xcassets */,
-				2A8489D62A18BCCA00461ADB /* LaunchScreen.storyboard */,
+				2A8489FC2A18BCE800461ADB /* Resource */,
 				2A8489D92A18BCCA00461ADB /* Info.plist */,
-				2A8489D12A18BCCA00461ADB /* UserListDemo.xcdatamodeld */,
 			);
 			path = UserListDemo;
 			sourceTree = "<group>";
@@ -128,6 +165,155 @@
 				2A8489EE2A18BCCA00461ADB /* UserListDemoUITestsLaunchTests.swift */,
 			);
 			path = UserListDemoUITests;
+			sourceTree = "<group>";
+		};
+		2A8489FB2A18BCDB00461ADB /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2A8489C82A18BCCA00461ADB /* AppDelegate.swift */,
+				2A8489CA2A18BCCA00461ADB /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2A8489FC2A18BCE800461ADB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2A8489D42A18BCCA00461ADB /* Assets.xcassets */,
+				2A8489D62A18BCCA00461ADB /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		2A8489FD2A18BCF800461ADB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2A848A112A18C37E00461ADB /* Network */,
+				2A848A0A2A18BEB400461ADB /* Model */,
+				2A8489FE2A18BD0000461ADB /* PersistenceStore */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2A8489FE2A18BD0000461ADB /* PersistenceStore */ = {
+			isa = PBXGroup;
+			children = (
+				2A848A072A18BE3700461ADB /* UserFetch+StoreData */,
+				2A848A042A18BD8800461ADB /* CoreDataManager */,
+				2A8489FF2A18BD1000461ADB /* CoreDataModels */,
+				2A8489D12A18BCCA00461ADB /* UserListDemo.xcdatamodeld */,
+			);
+			path = PersistenceStore;
+			sourceTree = "<group>";
+		};
+		2A8489FF2A18BD1000461ADB /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				2A0A5F9A2A193087008365F9 /* User+CoreDataClass.swift */,
+				2A0A5F9B2A193087008365F9 /* User+CoreDataProperties.swift */,
+			);
+			path = CoreDataModels;
+			sourceTree = "<group>";
+		};
+		2A848A042A18BD8800461ADB /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				2A848A052A18BD9C00461ADB /* CoreDataManager.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		2A848A072A18BE3700461ADB /* UserFetch+StoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2A848A082A18BE6C00461ADB /* StoreData.swift */,
+				2A848A162A18C90F00461ADB /* FetchUsers.swift */,
+			);
+			path = "UserFetch+StoreData";
+			sourceTree = "<group>";
+		};
+		2A848A0A2A18BEB400461ADB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A848A0B2A18BECA00461ADB /* UserRootRS.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A848A112A18C37E00461ADB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2A848A122A18C38A00461ADB /* ApiClient.swift */,
+				2A848A142A18C51800461ADB /* RemoteUserLoader.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2A848A182A18CD0B00461ADB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2A848A192A18CD1200461ADB /* Model */,
+				2A848A1C2A18CE8900461ADB /* UserListAdapter.swift */,
+				2A848A312A18DCB300461ADB /* TmpProto.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2A848A192A18CD1200461ADB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A848A1A2A18CD1F00461ADB /* UserPO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A848A1E2A18D05A00461ADB /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2A848A1F2A18D08800461ADB /* UserListVC */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2A848A1F2A18D08800461ADB /* UserListVC */ = {
+			isa = PBXGroup;
+			children = (
+				2A848A2B2A18D2AC00461ADB /* UserTableViewCell */,
+				2A848A272A18D0CD00461ADB /* ViewModel */,
+				2A848A262A18D0BA00461ADB /* ViewController */,
+				2A848A202A18D09900461ADB /* UserListVC.storyboard */,
+				2A848A222A18D0B400461ADB /* UserListDemo-Bridging-Header.h */,
+			);
+			path = UserListVC;
+			sourceTree = "<group>";
+		};
+		2A848A262A18D0BA00461ADB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2A848A232A18D0B400461ADB /* UserListViewController.h */,
+				2A848A242A18D0B400461ADB /* UserListViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2A848A272A18D0CD00461ADB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2A848A282A18D0E200461ADB /* UserListViewModel.h */,
+				2A848A292A18D0E200461ADB /* UserListViewModel.m */,
+				2A848A332A18E45800461ADB /* UserListDelegate.h */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2A848A2B2A18D2AC00461ADB /* UserTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2A848A2C2A18D2D300461ADB /* UserTableViewCell.h */,
+				2A848A2D2A18D2D300461ADB /* UserTableViewCell.m */,
+				2A848A2E2A18D2D300461ADB /* UserTableViewCell.xib */,
+			);
+			path = UserTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +384,7 @@
 				TargetAttributes = {
 					2A8489C42A18BCCA00461ADB = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 					2A8489DD2A18BCCA00461ADB = {
 						CreatedOnToolsVersion = 14.3;
@@ -234,9 +421,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A848A212A18D09900461ADB /* UserListVC.storyboard in Resources */,
 				2A8489D82A18BCCA00461ADB /* LaunchScreen.storyboard in Resources */,
 				2A8489D52A18BCCA00461ADB /* Assets.xcassets in Resources */,
 				2A8489D02A18BCCA00461ADB /* Main.storyboard in Resources */,
+				2A848A302A18D2D300461ADB /* UserTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +450,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A848A1B2A18CD1F00461ADB /* UserPO.swift in Sources */,
 				2A8489CD2A18BCCA00461ADB /* ViewController.swift in Sources */,
+				2A848A1D2A18CE8900461ADB /* UserListAdapter.swift in Sources */,
+				2A848A092A18BE6C00461ADB /* StoreData.swift in Sources */,
+				2A848A322A18DCB300461ADB /* TmpProto.swift in Sources */,
 				2A8489D32A18BCCA00461ADB /* UserListDemo.xcdatamodeld in Sources */,
+				2A848A2A2A18D0E200461ADB /* UserListViewModel.m in Sources */,
+				2A848A172A18C90F00461ADB /* FetchUsers.swift in Sources */,
+				2A0A5F9D2A193087008365F9 /* User+CoreDataProperties.swift in Sources */,
+				2A0A5F9C2A193087008365F9 /* User+CoreDataClass.swift in Sources */,
 				2A8489C92A18BCCA00461ADB /* AppDelegate.swift in Sources */,
+				2A848A152A18C51800461ADB /* RemoteUserLoader.swift in Sources */,
 				2A8489CB2A18BCCA00461ADB /* SceneDelegate.swift in Sources */,
+				2A848A062A18BD9C00461ADB /* CoreDataManager.swift in Sources */,
+				2A848A252A18D0B400461ADB /* UserListViewController.m in Sources */,
+				2A848A0C2A18BECA00461ADB /* UserRootRS.swift in Sources */,
+				2A848A132A18C38A00461ADB /* ApiClient.swift in Sources */,
+				2A848A2F2A18D2D300461ADB /* UserTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QA29H4VW6G;
@@ -449,6 +653,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,6 +662,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = petrick.kai.UserListDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "UserListDemo/Presentation/UserListVC/UserListDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -467,6 +674,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QA29H4VW6G;
@@ -477,6 +685,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,6 +694,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = petrick.kai.UserListDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "UserListDemo/Presentation/UserListVC/UserListDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

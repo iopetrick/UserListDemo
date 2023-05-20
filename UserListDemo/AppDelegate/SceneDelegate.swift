@@ -17,6 +17,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let userlistStoryboard = UIStoryboard(name: "UserListVC", bundle: nil)
+        let userListVC = userlistStoryboard.instantiateViewController(withIdentifier: "UserListViewController") as! UserListViewController
+        let viewModel = UserListViewModel()
+        viewModel.delegate = userListVC
+        
+        let httpClient = ApiClient(session: URLSession.shared)
+        let storeData = StoreUserData()
+        let rmtLoader = RemoteUserLoader(httpClient: httpClient, url: URL(string: "https://randomuser.me/api/")!, storeData: storeData)
+        viewModel.remoteUser = rmtLoader
+        
+        let fetchData = FetchUserData()
+        viewModel.adapter = UserListAdapter(fetchUser: fetchData)
+        
+        userListVC.viewModel = viewModel
+        
+        let navVC = UINavigationController(rootViewController: userListVC)
+        self.window?.rootViewController = navVC
+        self.window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -46,8 +65,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
 
-        // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        
     }
 
 

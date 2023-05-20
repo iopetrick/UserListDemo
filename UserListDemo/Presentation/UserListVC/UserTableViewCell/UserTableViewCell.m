@@ -12,12 +12,16 @@
 
 -(void)setupData:(UserPO *)user {
     NSString * fullName = [NSString stringWithFormat:@"%@ %@", user.firstName, user.lastName];
-    NSString * country = [NSString stringWithFormat:@"%@ | %@", @"Country", @"NA"];
+    NSString * country = [NSString stringWithFormat:@"%@ | %@", @"Country", user.country];
     
     [self.labelFullname setText: fullName];
     [self.labelEmail setText: user.email];
     [self.labelCountry setText: country];
     [self updateImage: user.image_small];
+    
+    NSString * regDate = [RelativeDates getRelativeDateStringWithDate: user.registered_date];
+    [self.labelRegisteredData setText:regDate];
+    
 }
 
 -(void) updateImage: (NSURL * _Nullable )url {

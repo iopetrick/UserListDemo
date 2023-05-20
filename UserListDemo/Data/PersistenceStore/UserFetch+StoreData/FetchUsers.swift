@@ -33,12 +33,19 @@ final public class FetchUserData: FetchUser {
     
     private func map(users: [User]) -> [UserPO] {
         return users.map { user in
+                                    
             UserPO(id: user.id ?? "",
                    firstName: user.first_name ?? "",
                    lastName: user.last_name ?? "",
                    email: user.email ?? "",
                    image_large: user.image_large,
-                   image_small: user.image_small)
+                   image_small: user.image_small,
+                   city: user.city,
+                   state: user.state,
+                   country: user.country,
+                   postcode: user.postcode,
+                   dob: user.dob,
+                   registered_date: user.registered_date)
         }
     }
 }

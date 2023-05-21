@@ -35,6 +35,10 @@
 		2A848A322A18DCB300461ADB /* TmpProto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A312A18DCB300461ADB /* TmpProto.swift */; };
 		2AAF700A2A19CB7A00156A1A /* ImageLoaderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF70092A19CB7A00156A1A /* ImageLoaderHelper.swift */; };
 		2AAF700D2A19DB6F00156A1A /* UserListDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF700C2A19DB6F00156A1A /* UserListDIContainer.swift */; };
+		2AAF70122A19DD5C00156A1A /* UserDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF70112A19DD5C00156A1A /* UserDetail.storyboard */; };
+		2AAF70142A19DD8000156A1A /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF70132A19DD8000156A1A /* UserDetailViewController.swift */; };
+		2AAF70162A19E29300156A1A /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF70152A19E29300156A1A /* UserDetailViewModel.swift */; };
+		2AAF70182A19E5EC00156A1A /* UserDetailDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF70172A19E5EC00156A1A /* UserDetailDIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +96,10 @@
 		2A848A332A18E45800461ADB /* UserListDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserListDelegate.h; sourceTree = "<group>"; };
 		2AAF70092A19CB7A00156A1A /* ImageLoaderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderHelper.swift; sourceTree = "<group>"; };
 		2AAF700C2A19DB6F00156A1A /* UserListDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDIContainer.swift; sourceTree = "<group>"; };
+		2AAF70112A19DD5C00156A1A /* UserDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetail.storyboard; sourceTree = "<group>"; };
+		2AAF70132A19DD8000156A1A /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		2AAF70152A19E29300156A1A /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
+		2AAF70172A19E5EC00156A1A /* UserDetailDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailDIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +284,7 @@
 		2A848A1E2A18D05A00461ADB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				2AAF700E2A19DD2B00156A1A /* UserDetailVC */,
 				2A848A1F2A18D08800461ADB /* UserListVC */,
 			);
 			path = Presentation;
@@ -334,8 +343,35 @@
 			isa = PBXGroup;
 			children = (
 				2AAF700C2A19DB6F00156A1A /* UserListDIContainer.swift */,
+				2AAF70172A19E5EC00156A1A /* UserDetailDIContainer.swift */,
 			);
 			path = CompositionDI;
+			sourceTree = "<group>";
+		};
+		2AAF700E2A19DD2B00156A1A /* UserDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				2AAF70102A19DD4A00156A1A /* ViewModel */,
+				2AAF700F2A19DD4300156A1A /* ViewController */,
+				2AAF70112A19DD5C00156A1A /* UserDetail.storyboard */,
+			);
+			path = UserDetailVC;
+			sourceTree = "<group>";
+		};
+		2AAF700F2A19DD4300156A1A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2AAF70132A19DD8000156A1A /* UserDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2AAF70102A19DD4A00156A1A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2AAF70152A19E29300156A1A /* UserDetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,6 +481,7 @@
 			files = (
 				2A848A212A18D09900461ADB /* UserListVC.storyboard in Resources */,
 				2A8489D82A18BCCA00461ADB /* LaunchScreen.storyboard in Resources */,
+				2AAF70122A19DD5C00156A1A /* UserDetail.storyboard in Resources */,
 				2A8489D52A18BCCA00461ADB /* Assets.xcassets in Resources */,
 				2A8489D02A18BCCA00461ADB /* Main.storyboard in Resources */,
 				2A848A302A18D2D300461ADB /* UserTableViewCell.xib in Resources */,
@@ -486,6 +523,9 @@
 				2A8489C92A18BCCA00461ADB /* AppDelegate.swift in Sources */,
 				2A848A152A18C51800461ADB /* RemoteUserLoader.swift in Sources */,
 				2A8489CB2A18BCCA00461ADB /* SceneDelegate.swift in Sources */,
+				2AAF70162A19E29300156A1A /* UserDetailViewModel.swift in Sources */,
+				2AAF70182A19E5EC00156A1A /* UserDetailDIContainer.swift in Sources */,
+				2AAF70142A19DD8000156A1A /* UserDetailViewController.swift in Sources */,
 				2A848A062A18BD9C00461ADB /* CoreDataManager.swift in Sources */,
 				2AAF700D2A19DB6F00156A1A /* UserListDIContainer.swift in Sources */,
 				2A848A252A18D0B400461ADB /* UserListViewController.m in Sources */,

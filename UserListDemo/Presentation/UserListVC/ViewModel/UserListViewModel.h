@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property  ImageLoaderHelper *imageLoader;
 @property int page;
+@property BOOL isMoreDataAvailable;
+@property BOOL isLoading;
 
 -(void) loadUsers;
 

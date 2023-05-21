@@ -32,9 +32,7 @@ final public class RemoteUserLoader: NSObject {
             }
         }
     }
-    
-    
-    
+            
     private func updateQueryParam(page: Int, limit: Int) -> URL {
                 
         var urlComponenet = URLComponents(string: url.absoluteString)

@@ -41,6 +41,14 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    BOOL indexCondition = indexPath.row == (self.viewModel.numberOfRow - 1);
+    
+    if (indexCondition && self.viewModel.isLoading == NO && self.viewModel.isMoreDataAvailable == YES) {
+        [self.viewModel loadUsers];
+    }
+}
+
 -(void) reloadTable {
     
     dispatch_async(dispatch_get_main_queue(), ^{

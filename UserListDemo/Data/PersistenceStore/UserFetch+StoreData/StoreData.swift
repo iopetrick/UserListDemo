@@ -8,12 +8,12 @@
 import Foundation
 
 protocol StoreData {
-    func storeUsers(users: [UserRS], completion: (Error?) -> Void)
+    func storeUsers(users: [UserRS], completion: @escaping (Error?) -> Void)
 }
 
 final class StoreUserData: StoreData {
             
-    func storeUsers(users: [UserRS], completion: (Error?) -> Void) {
+    func storeUsers(users: [UserRS], completion: @escaping (Error?) -> Void) {
     
         if users.isEmpty {
             completion(NSError(domain: "No data to save", code: 0))
@@ -21,7 +21,6 @@ final class StoreUserData: StoreData {
         }
         
         let container = CoreDataManager.shared.persistentContainer
-        
         
         container.performBackgroundTask { context in
             
@@ -41,13 +40,7 @@ final class StoreUserData: StoreData {
                 user.dob = DateFormatterHelper.toDate(date: userModel.dob.date)
             }
             
-            CoreDataManager.shared.save(using: context) { error in
-                if error != nil {
-                    print("Error")
-                } else {
-                    print("success")
-                }
-            }
+            CoreDataManager.shared.save(using: context) { completion($0) }
         }
     }
     

@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 @class UserPO;
+@class ImageLoaderHelper;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *labelCountry;
 @property (weak, nonatomic) IBOutlet UILabel *labelRegisteredData;
 
--(void) setupData: (UserPO *)user;
+-(void)setupData:(UserPO *)user withImageLoader:(ImageLoaderHelper *)imageLoader;
 
 @end
 

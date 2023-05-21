@@ -33,6 +33,7 @@
 		2A848A2F2A18D2D300461ADB /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A2D2A18D2D300461ADB /* UserTableViewCell.m */; };
 		2A848A302A18D2D300461ADB /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A848A2E2A18D2D300461ADB /* UserTableViewCell.xib */; };
 		2A848A322A18DCB300461ADB /* TmpProto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A312A18DCB300461ADB /* TmpProto.swift */; };
+		2AAF700A2A19CB7A00156A1A /* ImageLoaderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF70092A19CB7A00156A1A /* ImageLoaderHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		2A848A2E2A18D2D300461ADB /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		2A848A312A18DCB300461ADB /* TmpProto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpProto.swift; sourceTree = "<group>"; };
 		2A848A332A18E45800461ADB /* UserListDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserListDelegate.h; sourceTree = "<group>"; };
+		2AAF70092A19CB7A00156A1A /* ImageLoaderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			children = (
 				2A8489FB2A18BCDB00461ADB /* AppDelegate */,
 				2A8489CC2A18BCCA00461ADB /* ViewController.swift */,
+				2AAF70082A19CB6500156A1A /* Helper */,
 				2A848A1E2A18D05A00461ADB /* Presentation */,
 				2A848A182A18CD0B00461ADB /* Domain */,
 				2A8489FD2A18BCF800461ADB /* Data */,
@@ -316,6 +319,14 @@
 			path = UserTableViewCell;
 			sourceTree = "<group>";
 		};
+		2AAF70082A19CB6500156A1A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2AAF70092A19CB7A00156A1A /* ImageLoaderHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -450,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAF700A2A19CB7A00156A1A /* ImageLoaderHelper.swift in Sources */,
 				2A848A1B2A18CD1F00461ADB /* UserPO.swift in Sources */,
 				2A8489CD2A18BCCA00461ADB /* ViewController.swift in Sources */,
 				2A848A1D2A18CE8900461ADB /* UserListAdapter.swift in Sources */,

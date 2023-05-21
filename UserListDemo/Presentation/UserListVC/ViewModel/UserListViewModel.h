@@ -10,7 +10,7 @@
 @class UserListAdapter;
 @class UserPO;
 @class RemoteUserLoader;
-
+@class ImageLoaderHelper;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) RemoteUserLoader *remoteUser;
 @property  NSMutableArray<UserPO*> *users;
 
+@property  ImageLoaderHelper *imageLoader;
 @property int page;
 
 -(void) loadUsers;

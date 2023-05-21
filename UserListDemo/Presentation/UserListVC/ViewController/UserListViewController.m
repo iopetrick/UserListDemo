@@ -36,8 +36,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserTableViewCell"];
-    [cell setupData: self.viewModel.users[indexPath.row]];
+    UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UserTableViewCell"];    
+    [cell setupData: self.viewModel.users[indexPath.row] withImageLoader: [self.viewModel imageLoader]];
     return cell;
 }
 

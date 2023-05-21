@@ -10,31 +10,21 @@
 
 @implementation UserTableViewCell
 
--(void)setupData:(UserPO *)user {
+-(void)setupData:(UserPO *)user withImageLoader:(ImageLoaderHelper *)imageLoader {
     NSString * fullName = [NSString stringWithFormat:@"%@ %@", user.firstName, user.lastName];
     NSString * country = [NSString stringWithFormat:@"%@ | %@", @"Country", user.country];
     
     [self.labelFullname setText: fullName];
     [self.labelEmail setText: user.email];
     [self.labelCountry setText: country];
-    [self updateImage: user.image_small];
+    
     
     NSString * regDate = [RelativeDates getRelativeDateStringWithDate: user.registered_date];
     [self.labelRegisteredData setText:regDate];
     
+    self.imageViewProfile.image = nil;
+    if(user.image_small == nil) return;
+    [imageLoader loadImageWithUrl: user.image_small imageView: self.imageViewProfile];
+    
 }
-
--(void) updateImage: (NSURL * _Nullable )url {
-    if(url == nil) return;
-    dispatch_async(dispatch_get_global_queue(0,0), ^{
-        NSData * data = [[NSData alloc] initWithContentsOfURL: url];
-        if ( data == nil )
-            return;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.imageViewProfile.image = [UIImage imageWithData: data];
-        });
-        
-    });
-}
-
 @end

@@ -17,6 +17,7 @@ const int LIMIT = 10;
     if (self) {
         self.page = 1;
         self.users = [[NSMutableArray alloc] init];
+        self.imageLoader = [[ImageLoaderHelper alloc] init];
     }
     return self;
 }

@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "UserListViewModel.h"
 #import "UserTableViewCell.h"
+@class MainCoordinator;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic) IBOutlet UITableView *userList;
 @property (strong, nonatomic) UserListViewModel *viewModel;
-
+@property (weak, nonatomic) MainCoordinator *coordinator;
 @end
 
 NS_ASSUME_NONNULL_END

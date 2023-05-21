@@ -9,6 +9,8 @@ import UIKit
 
 class UserDetailViewController: UIViewController {
     
+    weak var coordinator: MainCoordinator?
+    
     @IBOutlet weak var imageviewProfile: UIImageView!
     @IBOutlet weak var labelAge: UILabel!
 
@@ -27,15 +29,27 @@ class UserDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupView()
     }
 
     func setupView() {
+        
+        let backButton = UIBarButtonItem(image: UIImage(named: "ic_left"),
+                                         style: UIBarButtonItem.Style.plain,
+                                         target: self,
+                                         action: #selector(buttonClickedBack))
+        backButton.tintColor = UIColor.label
+        self.navigationItem.leftBarButtonItem = backButton
         
         self.viewModel.closureUpdateUI = { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.fillUI()
         }
+        self.viewModel.viewDidLoad()
+    }
+    
+    @objc func buttonClickedBack() {
+        self.coordinator?.popViewController()
     }
     
     private func fillUI() {
@@ -45,10 +59,11 @@ class UserDetailViewController: UIViewController {
         if let url = viewModel.imageURL {
             viewModel.imageLoader.loadImage(url: url, imageView: imageviewProfile)
         }
+        labelAge.text = viewModel.age
         
         labelEmail.text = viewModel.email
-        labelDOJ.text = viewModel.email
-        labelDOB.text = viewModel.email
+        labelDOJ.text = viewModel.dateOfJoined
+        labelDOB.text = viewModel.dateOfBirth
         
         labelCity.text = viewModel.city
         labelState.text = viewModel.state

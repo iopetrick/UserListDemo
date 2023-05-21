@@ -12,12 +12,9 @@
 
 -(void)setupData:(UserPO *)user withImageLoader:(ImageLoaderHelper *)imageLoader {
     NSString * fullName = [NSString stringWithFormat:@"%@ %@", user.firstName, user.lastName];
-    NSString * country = [NSString stringWithFormat:@"%@ | %@", @"Country", user.country];
-    
+        
     [self.labelFullname setText: fullName];
     [self.labelEmail setText: user.email];
-    [self.labelCountry setText: country];
-    
     
     NSString * regDate = [RelativeDates getRelativeDateStringWithDate: user.registered_date];
     [self.labelRegisteredData setText:regDate];
@@ -26,5 +23,21 @@
     if(user.image_small == nil) return;
     [imageLoader loadImageWithUrl: user.image_small imageView: self.imageViewProfile];
     
+    [self setupCountryName: user.country];
+}
+
+-(void)setupCountryName:(NSString *) country {
+    NSString * placeholder = @"Country | ";
+    NSString * countryString = country;
+    
+    NSString * completeString = [NSString stringWithFormat:@"%@%@", placeholder, countryString];
+    
+    NSMutableAttributedString *attributedString =[[NSMutableAttributedString alloc] initWithString:completeString];
+    
+    [attributedString addAttribute:NSFontAttributeName
+                             value:[UIFont boldSystemFontOfSize: 14.0]
+                             range:[completeString rangeOfString:placeholder]];
+    
+    [self.labelCountry setAttributedText: attributedString];
 }
 @end

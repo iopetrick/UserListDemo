@@ -6,6 +6,7 @@
 //
 
 #import "UserListViewController.h"
+#import "UserListDemo-Swift.h"
 
 @interface UserListViewController ()
 
@@ -50,7 +51,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [self.coordinator openUserDetailsWithUserPO: self.viewModel.users[indexPath.row]];
 }
 
 -(void) reloadTable {

@@ -28,7 +28,7 @@ final public class RemoteUserLoader: NSObject {
                 let root = strongSelf.map(data: data)
                 strongSelf.storeData.storeUsers(users: root?.results ?? []) { completion($0) }
             case .failure(let error):
-                print(error)
+                completion(error)
             }
         }
     }
@@ -47,15 +47,10 @@ final public class RemoteUserLoader: NSObject {
     
     private func map(data: Data?) -> UserRootRS? {
         let decoder = JSONDecoder()
-        guard let data = data else {
+        guard let data = data,
+              let root = try? decoder.decode(UserRootRS.self, from: data) else {
             return nil
         }
-        do {
-            let root = try decoder.decode(UserRootRS.self, from: data)
-            return root
-        } catch {
-            print(error)
-        }
-        return nil
+        return root
     }
 }

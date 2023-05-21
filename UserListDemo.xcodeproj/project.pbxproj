@@ -157,7 +157,6 @@
 				2A8489FB2A18BCDB00461ADB /* AppDelegate */,
 				2A8489CC2A18BCCA00461ADB /* ViewController.swift */,
 				2AAF70192A19E78E00156A1A /* Coordinator */,
-				2AAF700B2A19DB5700156A1A /* CompositionDI */,
 				2AAF70082A19CB6500156A1A /* Helper */,
 				2A848A1E2A18D05A00461ADB /* Presentation */,
 				2A848A182A18CD0B00461ADB /* Domain */,
@@ -382,6 +381,7 @@
 		2AAF70192A19E78E00156A1A /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				2AAF700B2A19DB5700156A1A /* CompositionDI */,
 				2AAF701A2A19E7AC00156A1A /* Coordinator.swift */,
 				2AAF701C2A19E84500156A1A /* MainCoordinator.swift */,
 			);

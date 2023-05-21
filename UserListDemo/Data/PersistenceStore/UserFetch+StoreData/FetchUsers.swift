@@ -18,6 +18,7 @@ final public class FetchUserData: FetchUser {
         let fetchRequest = User.fetchRequest()
         fetchRequest.fetchLimit = limit
         fetchRequest.fetchOffset = offset
+        //fetchRequest.sortDescriptors = [NSSortDescriptor(key: "registered_date", ascending: false)]
         do {
             let users = try CoreDataManager.shared.backgroundContext.fetch(fetchRequest)
             if !users.isEmpty {

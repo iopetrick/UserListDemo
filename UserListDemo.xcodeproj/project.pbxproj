@@ -34,6 +34,7 @@
 		2A848A302A18D2D300461ADB /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A848A2E2A18D2D300461ADB /* UserTableViewCell.xib */; };
 		2A848A322A18DCB300461ADB /* TmpProto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A312A18DCB300461ADB /* TmpProto.swift */; };
 		2AAF700A2A19CB7A00156A1A /* ImageLoaderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF70092A19CB7A00156A1A /* ImageLoaderHelper.swift */; };
+		2AAF700D2A19DB6F00156A1A /* UserListDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF700C2A19DB6F00156A1A /* UserListDIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		2A848A312A18DCB300461ADB /* TmpProto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpProto.swift; sourceTree = "<group>"; };
 		2A848A332A18E45800461ADB /* UserListDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserListDelegate.h; sourceTree = "<group>"; };
 		2AAF70092A19CB7A00156A1A /* ImageLoaderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderHelper.swift; sourceTree = "<group>"; };
+		2AAF700C2A19DB6F00156A1A /* UserListDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			children = (
 				2A8489FB2A18BCDB00461ADB /* AppDelegate */,
 				2A8489CC2A18BCCA00461ADB /* ViewController.swift */,
+				2AAF700B2A19DB5700156A1A /* CompositionDI */,
 				2AAF70082A19CB6500156A1A /* Helper */,
 				2A848A1E2A18D05A00461ADB /* Presentation */,
 				2A848A182A18CD0B00461ADB /* Domain */,
@@ -327,6 +330,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		2AAF700B2A19DB5700156A1A /* CompositionDI */ = {
+			isa = PBXGroup;
+			children = (
+				2AAF700C2A19DB6F00156A1A /* UserListDIContainer.swift */,
+			);
+			path = CompositionDI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -476,6 +487,7 @@
 				2A848A152A18C51800461ADB /* RemoteUserLoader.swift in Sources */,
 				2A8489CB2A18BCCA00461ADB /* SceneDelegate.swift in Sources */,
 				2A848A062A18BD9C00461ADB /* CoreDataManager.swift in Sources */,
+				2AAF700D2A19DB6F00156A1A /* UserListDIContainer.swift in Sources */,
 				2A848A252A18D0B400461ADB /* UserListViewController.m in Sources */,
 				2A848A0C2A18BECA00461ADB /* UserRootRS.swift in Sources */,
 				2A848A132A18C38A00461ADB /* ApiClient.swift in Sources */,

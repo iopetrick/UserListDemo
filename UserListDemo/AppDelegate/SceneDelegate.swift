@@ -10,30 +10,16 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    
+    var userListDI = UserListDIContainer()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
-        
-        let userlistStoryboard = UIStoryboard(name: "UserListVC", bundle: nil)
-        let userListVC = userlistStoryboard.instantiateViewController(withIdentifier: "UserListViewController") as! UserListViewController
-        let viewModel = UserListViewModel()
-        viewModel.delegate = userListVC
-        
-        let httpClient = ApiClient(session: URLSession.shared)
-        let storeData = StoreUserData()
-        let rmtLoader = RemoteUserLoader(httpClient: httpClient, url: URL(string: "https://randomuser.me/api/")!, storeData: storeData)
-        viewModel.remoteUser = rmtLoader
-        
-        let fetchData = FetchUserData()
-        viewModel.adapter = UserListAdapter(fetchUser: fetchData)
-        
-        userListVC.viewModel = viewModel
-        
-        let navVC = UINavigationController(rootViewController: userListVC)
+                        
+        let navVC = UINavigationController(rootViewController: userListDI.makeUserListViewController())
         self.window?.rootViewController = navVC
         self.window?.makeKeyAndVisible()
     }

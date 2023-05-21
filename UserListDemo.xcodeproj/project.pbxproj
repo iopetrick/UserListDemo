@@ -31,7 +31,6 @@
 		2A848A2A2A18D0E200461ADB /* UserListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A292A18D0E200461ADB /* UserListViewModel.m */; };
 		2A848A2F2A18D2D300461ADB /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A2D2A18D2D300461ADB /* UserTableViewCell.m */; };
 		2A848A302A18D2D300461ADB /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A848A2E2A18D2D300461ADB /* UserTableViewCell.xib */; };
-		2A848A322A18DCB300461ADB /* TmpProto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A848A312A18DCB300461ADB /* TmpProto.swift */; };
 		2AAF700A2A19CB7A00156A1A /* ImageLoaderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF70092A19CB7A00156A1A /* ImageLoaderHelper.swift */; };
 		2AAF700D2A19DB6F00156A1A /* UserListDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF700C2A19DB6F00156A1A /* UserListDIContainer.swift */; };
 		2AAF70122A19DD5C00156A1A /* UserDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF70112A19DD5C00156A1A /* UserDetail.storyboard */; };
@@ -92,7 +91,6 @@
 		2A848A2C2A18D2D300461ADB /* UserTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
 		2A848A2D2A18D2D300461ADB /* UserTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
 		2A848A2E2A18D2D300461ADB /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
-		2A848A312A18DCB300461ADB /* TmpProto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TmpProto.swift; sourceTree = "<group>"; };
 		2A848A332A18E45800461ADB /* UserListDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserListDelegate.h; sourceTree = "<group>"; };
 		2AAF70092A19CB7A00156A1A /* ImageLoaderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderHelper.swift; sourceTree = "<group>"; };
 		2AAF700C2A19DB6F00156A1A /* UserListDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDIContainer.swift; sourceTree = "<group>"; };
@@ -269,7 +267,6 @@
 			children = (
 				2A848A192A18CD1200461ADB /* Model */,
 				2A848A1C2A18CE8900461ADB /* UserListAdapter.swift */,
-				2A848A312A18DCB300461ADB /* TmpProto.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -524,7 +521,6 @@
 				2A848A1B2A18CD1F00461ADB /* UserPO.swift in Sources */,
 				2A848A1D2A18CE8900461ADB /* UserListAdapter.swift in Sources */,
 				2A848A092A18BE6C00461ADB /* StoreData.swift in Sources */,
-				2A848A322A18DCB300461ADB /* TmpProto.swift in Sources */,
 				2A8489D32A18BCCA00461ADB /* UserListDemo.xcdatamodeld in Sources */,
 				2A848A2A2A18D0E200461ADB /* UserListViewModel.m in Sources */,
 				2AAF701B2A19E7AC00156A1A /* Coordinator.swift in Sources */,
